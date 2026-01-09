@@ -11,7 +11,7 @@ const Footer = () => {
     {/* Top Contact Cards */}
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 mb-12 sm:mb-14">
       {[
-        { title: "Call anytime", value: "+94 77-425-2727", icon: "📞" },
+        { title: "Call anytime", value: "+94 9380 334317", icon: "📞" },
         { title: "Email address", value: "info@jstudio.com", icon: "✉️" },
         { title: "Office Hours", value: "8:00 AM - 10:00 PM", icon: "⏰" },
       ].map((item, i) => (
