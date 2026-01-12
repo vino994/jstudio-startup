@@ -9,7 +9,7 @@ const TopBar = ({ show }) => {
     >
       <div className="px-10 h-full flex items-center justify-between text-gray-300">
         <div className="flex items-center gap-2">
-          📍 <span>73/1 North Street,Aranthangi</span>
+          📍 <span> No. 123, Main Street, Colombo 07, Sri Lanka</span>
         </div>
 
         <div className="flex items-center gap-6">
@@ -17,7 +17,7 @@ const TopBar = ({ show }) => {
             📞 <span>+919380334317</span>
           </div>
           <div className="flex items-center gap-2">
-            ✉️ <span>info@lushanth.com</span>
+            ✉️ <span>novatecsaas@gmail.com</span>
           </div>
         </div>
       </div>

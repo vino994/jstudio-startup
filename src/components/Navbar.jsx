@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../assets/nova-logo.png"; // adjust path if needed
 
 const links = [
   { path: "/", label: "Home" },
@@ -7,8 +8,6 @@ const links = [
   { path: "/services", label: "Services" },
   { path: "/portfolio", label: "Portfolio" },
   { path: "/products", label: "Products" },
-  { path: "/faqs", label: "Faqs" },
-  { path: "/blog", label: "Blog" },
   { path: "/contact", label: "Contact Us" },
 ];
 
@@ -35,34 +34,44 @@ const Navbar = ({ topOffset }) => {
   return (
     <>
       {/* FIXED NAVBAR */}
-<div
-  className={`fixed left-0 w-full z-[9999] transition-all duration-300
-  ${topOffset ? "md:top-10 top-0" : "top-0"}`}
->
-
-
-
+      <div
+        className={`fixed left-0 w-full z-[9999] transition-all duration-300 ${
+          topOffset ? "md:top-10 top-0" : "top-0"
+        }`}
+      >
         <nav
           ref={glowRef}
           onMouseMove={handleMouseMove}
           className={`w-full backdrop-blur-xl bg-white/5 border-b border-white/10 relative navbar-glow transition-all duration-300 ${
-            shrink ? "py-2" : "py-4"
+            shrink ? "py-2" : "py-3"
           }`}
         >
-          <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            {/* Logo */}
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">
-              Jstudio
-            </h1>
+          <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            
+            {/* LOGO + TITLE */}
+            <div className="flex items-center gap-3">
+ <img
+  src={logo}
+  alt="Hypernova Logo"
+  className="w-20 h-20 md:w-24 md:h-24 object-contain scale-110 -my-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]"
+/>
 
-            {/* Desktop Menu */}
-            <ul className="hidden md:flex gap-8 relative">
+
+              <h1 className="text-lg md:text-xl font-bold bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">
+                HYPERNOVA (PVT) Ltd
+              </h1>
+            </div>
+
+            {/* CENTER MENU */}
+            <ul className="hidden md:flex gap-8 absolute left-1/2 -translate-x-1/2">
               {links.map((item) => (
                 <li key={item.path} className="relative group">
                   <NavLink
                     to={item.path}
                     className={({ isActive }) =>
-                      `transition ${isActive ? "text-pink-400" : ""}`
+                      `transition ${
+                        isActive ? "text-pink-400" : "text-white"
+                      }`
                     }
                   >
                     {item.label}
@@ -73,22 +82,31 @@ const Navbar = ({ topOffset }) => {
               ))}
             </ul>
 
-            {/* Right */}
-            <div className="flex items-center gap-4">
-              <span className="hidden md:block">🔍</span>
+            {/* RIGHT SIDE */}
+        <div className="flex items-center gap-4">
+  <a
+    href="mailto:novatrcsaas@gmail.com"
+    className="hidden md:block px-5 py-2 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition"
+  >
+    Mail Us
+  </a>
 
-              <button className="hidden md:block px-5 py-2 rounded-full bg-gradient-to-r from-blue-600 to-pink-500 shadow-lg transition hover:scale-105">
-                Get in Touch
-              </button>
+  <a
+    href="tel:+919876543210" // <-- change to real number
+    className="hidden md:block px-5 py-2 rounded-full bg-gradient-to-r from-blue-600 to-pink-500 shadow-lg transition hover:scale-105"
+  >
+    Get in Touch
+  </a>
 
-              {/* Hamburger */}
-              <button
-                onClick={() => setOpen(true)}
-                className="md:hidden text-2xl"
-              >
-                ☰
-              </button>
-            </div>
+  {/* Hamburger */}
+  <button
+    onClick={() => setOpen(true)}
+    className="md:hidden text-2xl"
+  >
+    ☰
+  </button>
+</div>
+
           </div>
         </nav>
       </div>
@@ -108,11 +126,11 @@ const Navbar = ({ topOffset }) => {
         }`}
       >
         <div className="p-6 flex justify-between items-center border-b border-white/10">
-          <h2 className="text-xl font-semibold">Jstudio</h2>
+          <h2 className="text-xl font-semibold">HYPERNOVA (PVT) Ltd</h2>
           <button onClick={() => setOpen(false)}>✕</button>
         </div>
 
-        {/* MENU */}
+        {/* MOBILE MENU */}
         <ul className="flex flex-col gap-6 p-6">
           {links.map((item) => (
             <NavLink
@@ -126,11 +144,14 @@ const Navbar = ({ topOffset }) => {
           ))}
         </ul>
 
-        {/* BUTTONS */}
+        {/* MOBILE BUTTONS */}
         <div className="mt-auto p-6 flex gap-4">
-          <button className="w-full py-3 rounded-lg bg-blue-600">
-            Contact Us
-          </button>
+          <a
+            href="mailto:info@hypernova.com"
+            className="w-full py-3 rounded-lg bg-blue-600 text-center"
+          >
+            Mail Us
+          </a>
           <button className="w-full py-3 rounded-lg bg-white/10">
             Learn More
           </button>

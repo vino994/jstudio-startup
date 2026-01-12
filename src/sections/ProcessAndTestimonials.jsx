@@ -1,23 +1,26 @@
 import { useEffect, useState } from "react";
+import step1 from "../assets/service-2.svg";
+import step2 from "../assets/service-3.png";
+import step3 from "../assets/service-2.svg";
 
 const steps = [
   {
     step: "01",
-    title: "Initiation & Planning",
-    desc: "We are leaders in creating and advancing new technology.",
-    image: "/src/assets/service-2.svg",
+    title: "Discovery & Strategy",
+    desc: "We understand your business goals and craft a winning digital strategy.",
+    image: step1,
   },
   {
     step: "02",
-    title: "Execution & Development",
-    desc: "We turn ideas into reliable solutions that drive growth.",
-    image: "/src/assets/service-3.png",
+    title: "Design & Development",
+    desc: "We build high-performing software, websites, and digital solutions.",
+    image: step2,
   },
   {
     step: "03",
-    title: "Testing & Maintenance",
-    desc: "We ensure quality with ongoing testing and maintenance.",
-    image: "/src/assets/service-2.svg",
+    title: "Launch & Growth",
+    desc: "We test, deploy, optimize, and scale your digital product for success.",
+    image: step3,
   },
 ];
 
@@ -25,17 +28,17 @@ const testimonials = [
   {
     name: "PRITHVIRAJ K",
     role: "Social Media Activator",
-    text: "Such an amazing service they are providing. I got an quiz related portal. It was in acceptable cost and with more easy and accessible features. Customer support also really good.",
+    text: "HYPERNOVA delivered a powerful quiz-based platform for us at a very affordable cost. The features are smooth, user-friendly, and their support team is always responsive.",
   },
   {
     name: "ALEX JOHN",
     role: "Startup Founder",
-    text: "Jstudio delivered our product on time with amazing quality. Their support is unmatched. Highly recommended!",
+    text: "From concept to launch, the HYPERNOVA team handled everything perfectly. The product quality and delivery speed exceeded our expectations.",
   },
   {
     name: "SARA WILLIAMS",
     role: "Marketing Lead",
-    text: "Professional, fast, and creative team. Loved working with them!",
+    text: "Their SEO and digital marketing strategies gave us amazing visibility and leads. Very professional and creative team!",
   },
 ];
 
@@ -65,20 +68,24 @@ const ProcessAndTestimonials = () => {
         {/* ================= PROCESS ================= */}
         <div className="text-center mb-12 sm:mb-20" data-aos="fade-up">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-            Our process for driving <br className="hidden sm:block" />
-            <span className="text-pink-400">business growth.</span>
+            Our Proven Process for <br className="hidden sm:block" />
+            <span className="text-pink-400">Digital Business Growth</span>
           </h2>
+
+          <p className="text-gray-400 mt-4 max-w-xl mx-auto text-sm sm:text-base">
+            At HYPERNOVA (Pvt) Ltd, we follow a structured and result-driven
+            approach to deliver powerful digital solutions.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 relative mb-20 sm:mb-32">
-        {steps.map((step, i) => (
-  <div
-    key={i}
-    data-aos="zoom-in-up"
-    data-aos-delay={i * 150}
-    className="text-center relative group"
-  >
-
+          {steps.map((step, i) => (
+            <div
+              key={i}
+              data-aos="zoom-in-up"
+              data-aos-delay={i * 150}
+              className="text-center relative group"
+            >
               <div className="mb-6 sm:mb-8 flex justify-center">
                 <img
                   src={step.image}
@@ -106,23 +113,22 @@ const ProcessAndTestimonials = () => {
         </div>
 
         {/* ================= TESTIMONIALS ================= */}
-        <div className="relative bg-gradient-to-br from-blue-950 to-blue-900 rounded-[1.5rem] sm:rounded-[2rem] p-6 sm:p-10 md:p-12 text-center overflow-hidden"  data-aos="fade-up"
-  data-aos-delay="300">
-
+        <div
+          className="relative bg-gradient-to-br from-blue-950 to-blue-900 rounded-[1.5rem] sm:rounded-[2rem] p-6 sm:p-10 md:p-12 text-center overflow-hidden"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           {/* Slider */}
           <div className="relative overflow-hidden max-w-3xl mx-auto min-h-[220px] sm:min-h-[200px]">
             <div
               className="flex transition-transform duration-700 ease-in-out"
               style={{ transform: `translateX(-${index * 100}%)` }}
             >
-           {testimonials.map((item, i) => (
-  <div
-    key={i}
-    data-aos="fade-up"
-    data-aos-delay={i * 100}
-    className="min-w-full px-4"
-  >
-
+              {testimonials.map((item, i) => (
+                <div
+                  key={i}
+                  className="min-w-full px-4"
+                >
                   <div className="text-4xl sm:text-5xl text-pink-400 mb-3 sm:mb-4">
                     “
                   </div>
@@ -165,7 +171,6 @@ const ProcessAndTestimonials = () => {
             ›
           </button>
         </div>
-
       </div>
     </section>
   );

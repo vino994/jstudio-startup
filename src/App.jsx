@@ -2,6 +2,11 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import ComingSoon from "./pages/ComingSoon";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Portfolio from "./pages/Portfolio";
+import Products from "./pages/Products";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -9,13 +14,11 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
 
-        <Route path="about" element={<ComingSoon title="About Us" />} />
-        <Route path="services" element={<ComingSoon title="Services" />} />
-        <Route path="portfolio" element={<ComingSoon title="Portfolio" />} />
-        <Route path="products" element={<ComingSoon title="Products" />} />
-        <Route path="faqs" element={<ComingSoon title="FAQs" />} />
-        <Route path="blog" element={<ComingSoon title="Blog" />} />
-        <Route path="contact" element={<ComingSoon title="Contact Us" />} />
+        <Route path="about" element={<About />} />
+        <Route path="services" element={<Services />} />
+        <Route path="portfolio" element={<Portfolio />} />
+        <Route path="products" element={<Products />} />
+        <Route path="contact" element={<Contact />} />
       </Route>
     </Routes>
   );
