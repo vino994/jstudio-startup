@@ -9,7 +9,7 @@ const TopBar = ({ show }) => {
     >
       <div className="px-10 h-full flex items-center justify-between text-gray-300">
         <div className="flex items-center gap-2">
-          📍 <span> No. 123, Main Street, Colombo 07, Sri Lanka</span>
+          📍 <span> 87E, New Boundary Road, Batticaloa, Sri Lanka</span>
         </div>
 
         <div className="flex items-center gap-6">

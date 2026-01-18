@@ -41,6 +41,12 @@ const projects = [
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
     span: "row-span-2",
   },
+    {
+    title: "E-Commerce Platform",
+    category: "Web Development",
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c",
+    span: "row-span-1",
+  },
   {
     title: "Tech Startup Launch",
     category: "Product Development",

@@ -1,3 +1,4 @@
+import img1 from "../assets/start-2.jpg";
 const SkillsShowcase = () => {
   const ProgressBar = ({ title, percent }) => {
     return (

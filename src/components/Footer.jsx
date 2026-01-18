@@ -66,12 +66,11 @@ const Footer = () => {
               </div>
 
               <p className="text-gray-400 text-sm max-w-xs mb-3">
-                We build innovative digital products, scalable software,
-                and growth-focused marketing solutions for modern businesses.
+               Change Empowering Bussiness With Digital Excellence to Innovate Connect Evolve.
               </p>
 
               <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
-                📍 No. 123, Main Street, Colombo 07, Sri Lanka
+                📍 87E, New Boundary Road, Batticaloa, Sri Lanka
               </p>
             </div>
 

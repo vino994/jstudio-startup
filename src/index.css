@@ -130,3 +130,15 @@ clip-path: polygon(16% 0, 100% 0, 100% 81%, 84% 100%, 0 99%, 0% 60%, 0 16%);
     opacity: 0;
   }
 }
+.dotted-pattern1 {
+  width: 360px;
+  height: 360px;
+  background-image: radial-gradient(rgba(59,130,246,0.9) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+  opacity: 0.45;
+  pointer-events: none;
+  filter: drop-shadow(0 0 4px rgba(59,130,246,0.4));
+}
+
+
+

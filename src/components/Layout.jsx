@@ -46,7 +46,7 @@ useEffect(() => {
       <TopBar show={showTop} />
       <Navbar topOffset={showTop} />
 
-      <main className="pt-[120px] md:pt-[160px]">
+      <main className="pt-[120px] md:pt-[130px]">
         <Outlet />
       </main>
 <ScrollToTop />
